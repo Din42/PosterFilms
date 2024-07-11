@@ -1,0 +1,13 @@
+﻿@model PosterFilms.Model.Movie
+
+<h1>Информация о сеансе</h1>
+<h2>@Model.Title</h2>
+<p><strong>Режисер:</strong> @Model.Director</p>
+<p><strong>Год:</strong> @Model.Year</p>
+<p><strong>Дата сеанса:</strong> @Model.Date.ToShortDateString()</p>
+<p><strong>Время сеанса:</strong> @Model.Time.ToString(@"hh\:mm")</p>
+<p><strong>Описание:</strong> @Model.MovieTitle</p>
+<p><strong>Стоимость билета:</strong> @Model.TicketPrice.ToString("C")</p>
+@*<a asp-controller="Main" asp-action="Index">Назад</a>*@
+<a href="/Main/Index">Назад</a>
+

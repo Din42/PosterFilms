@@ -1,0 +1,16 @@
+﻿@model List<PosterFilms.Model.Movie>
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+
+<ul>
+    @foreach (var movie in Model)
+    {
+        <li>
+            @*<a asp-controller="Main" asp-action="Details" asp-route-id="@movie.Id">@movie.Title</a>*@
+            <a href="/Main/Details/@movie.Id">@movie.Title</a>
+        </li>
+    }
+</ul>
